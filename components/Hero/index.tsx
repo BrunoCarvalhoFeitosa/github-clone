@@ -73,7 +73,7 @@ const Hero = () => {
                                         className="d-block w-[44px] h-[44px] flex-grow-0 flex-shrink-0 mr-6 max-md:mr-3 scale-110"
                                     />
                                 </div>
-                                <div className="md:pr-5 pr-3 md:mr-2">
+                                <div className="md:pr-5 pr-3 md:mr-2 flex-1">
                                     <div className="font-medium text-white text-[16px] max-md:text-[14px] leading-5">
                                         GitHub Universe: Dive in to AI, security, and DevEx
                                     </div>
@@ -114,9 +114,9 @@ const Hero = () => {
                             The AI-powered developer platform to build, scale, and deliver secure software.
                         </p>
                     </div>
-                    <div className="flex lg:w-11/12 md:space-x-5 max-md:flex-col">
+                    <div className="flex lg:w-11/12 max-lg:flex-col">
                         <form action="">
-                            <div className="grid max-md:grid-rows-2 md:grid-cols-2">
+                            <div className="grid lg:grid-rows-2 lg:grid-cols-2">
                             <dl>
                                 <dd>
                                     <input
@@ -135,13 +135,13 @@ const Hero = () => {
                             </button>
                             </div>
                         </form>
-                        <span className="border-t-[1px] md:border-l-[1px] border-neutral-700 md:mx-10 mb-3 md:mb-0" />
-                            <a
-                                href=""
-                                onMouseEnter={() => setHovered1(true)}
-                                onMouseLeave={() => setHovered1(false)}
-                                className="flex items-center w-full md:w-auto justify-center text-[16px] py-3 px-5 max-md:mt-4 rounded-md border-[#ae88f9] border-[1.5px] text-white outline-none"
-                            >
+                        <span className="hidden lg:block border-t-[1px] md:border-l-[1px] border-neutral-700 md:mx-10 mb-3 md:mb-0 lg:h-[50px]" />
+                        <a
+                            href=""
+                            onMouseEnter={() => setHovered1(true)}
+                            onMouseLeave={() => setHovered1(false)}
+                            className="flex items-center w-full md:w-auto lg:h-[50px] justify-center text-[16px] py-3 px-5 mt-8 lg:mt-0 rounded-md border-[#ae88f9] border-[1.5px] text-white outline-none"
+                        >
                             Start a free enterprise trial
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

@@ -34,7 +34,7 @@ const Navbar = () => {
                                 onClick={() => setShowNav(!showNav)}
                                 className="lg:hidden cursor-pointer"
                             >
-                                <div className={`w-[23px] h-[2px] transition ease-in duration-150 bg-white mb-1 ${showNav ? "rotate-45 translate-y-[1px] mb-0" : "rotate-0 mb-1"}`}></div>     
+                                <div className={`w-[23px] h-[2px] transition ease-in duration-150 bg-white mb-1 ${showNav ? "rotate-45 translate-y-[6px] mb-0" : "rotate-0 mb-1"}`}></div>     
                                 <div className={`w-[23px] h-[2px] transition ease-in duration-150 bg-white mb-1 ${showNav ? "hidden mb-0" : "mb-1"}`}></div>     
                                 <div className={`w-[23px] h-[2px] transition ease-in duration-150 bg-white ${showNav ? "-rotate-45 mb-0" : "rotate-0"}`}></div>
                             </button>

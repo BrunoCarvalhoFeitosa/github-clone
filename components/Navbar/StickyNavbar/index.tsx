@@ -4,13 +4,13 @@ import { useEffect, useState } from "react"
 const StickyNav = () => {  
     const [isSticky, setIsSticky] = useState(false);
     const [isFixed, setIsFixed] = useState(false);
-    const [product,setproduct] = useState(false)
-    const [collab,setcollab] = useState(false)
-    const [security,setSecurity] = useState(false)
-    const [product1,setproduct1] = useState(false)
-    const [collab1,setcollab1] = useState(false)
-    const [security1,setSecurity1] = useState(false)
-    const [smallNav,setSmallNav] = useState(false)
+    const [product, setProduct] = useState(true)
+    const [collab, setCollab] = useState(false)
+    const [security, setSecurity] = useState(false)
+    const [product1, setProduct1] = useState(false)
+    const [collab1, setCollab1] = useState(false)
+    const [security1, setSecurity1] = useState(false)
+    const [smallNav, setSmallNav] = useState(false)
     const [hovered, setHovered] = useState(false)
     const [hovered1, setHovered1] = useState(false)
     const [showNav, setShowNav] = useState(false)
@@ -43,20 +43,20 @@ const StickyNav = () => {
             }
 
             if (topProduct && topProduct < 10) {
-                setproduct(true)
-                setcollab(false)
+                setProduct(true)
+                setCollab(false)
                 setSecurity(false)
             }
 
             if (topCollab && topCollab < 10) {
-                setproduct(false)
-                setcollab(true)
+                setProduct(false)
+                setCollab(true)
                 setSecurity(false)
             }
 
             if (topSecurity && topSecurity < 10) {
-                setproduct(false)
-                setcollab(false)
+                setProduct(false)
+                setCollab(false)
                 setSecurity(true)
             }
         }
@@ -71,18 +71,18 @@ const StickyNav = () => {
     useEffect(() => {
         window.addEventListener("scroll", () => {
             window && window.scrollY > 300
-                ? setShowNav(true)
-                : setShowNav(false)
+                ? setIsSticky(true)
+                : setIsSticky(false)
         })
     }, [])
 
     return (
-        <div id="nav" className={`fixed h-[100px] z-50 transition ease-in duration-150 ${isSticky ? "visible" : "invisible"}`}>
-            <div className={`w-screen ${showNav ? "visible" : "hidden"} ${isFixed ? "fixed" : "sticky"} py-2 bg-[#0d1117] shadow-slate-950 shadow-md top-0`}>
+        <div id="nav" className={`fixed h-[100px] z-50 transition ease-in duration-150 ${isSticky ? "visible translate-y-0" : "invisible translate-y-[-150px]"}`}>
+            <div className={`w-screen ${isFixed ? "fixed" : "sticky"} py-2 bg-[#0d1117] shadow-slate-950 shadow-md top-0`}>
                 <div className="max-w-[1280px] mx-auto pb-2 lg:pb-3 pt-1 flex lg:px-3 px-12 items-center max-lg:flex-col relative">
                     <button
                         onClick={() => setSmallNav(!smallNav)}
-                        className="lg:hidden absolute right-12 top-4"
+                        className="lg:hidden absolute right-12 top-4 z-[1]"
                     >
                         <svg
                             aria-hidden="true"
@@ -113,9 +113,9 @@ const StickyNav = () => {
                         <a
                             href="#productivity"
                             onClick={() => setSmallNav(false)}
-                            onMouseEnter={() => setproduct1(true)}
-                            onMouseLeave={() => setproduct1(false)}
-                            className={`max-lg:pt-2 outline-none ${product1 ? "lg:text-blue-500" : ""} ${product || smallNav ? "lg:text-blue-500 max-lg:pb-6" : "max-lg:hidden"}`}
+                            onMouseEnter={() => setProduct1(true)}
+                            onMouseLeave={() => setProduct1(false)}
+                            className={`max-lg:pt-2 outline-none w-[80%] md:w-auto ${product1 ? "lg:text-blue-500" : ""} ${product || smallNav ? "lg:text-blue-500 max-lg:pb-6" : "max-lg:hidden"}`}
                         >
                             Productivity
                             <div className={`w-10/12 max-lg:hidden mx-auto mt-1 h-[1px] bg-white scale-0 transition ease-in duration-200 ${product1 ? "scale-100 bg-blue-500" : ""} ${product ? "scale-100 bg-blue-500" : ""}`} />
@@ -123,9 +123,9 @@ const StickyNav = () => {
                         <a
                             href="#collaboration"
                             onClick={() => setSmallNav(false)}
-                            onMouseEnter={() => setcollab1(true)}
-                            onMouseLeave={() => setcollab1(false)}
-                            className={`max-lg:pt-2 outline-none ${collab1 ? "lg:text-blue-500" : ""} ${collab || smallNav ? "lg:text-blue-500 max-lg:pb-6" : "max-lg:hidden"}`}
+                            onMouseEnter={() => setCollab1(true)}
+                            onMouseLeave={() => setCollab1(false)}
+                            className={`max-lg:pt-2 outline-none w-[80%] md:w-auto ${collab1 ? "lg:text-blue-500" : ""} ${collab || smallNav ? "lg:text-blue-500 max-lg:pb-6" : "max-lg:hidden"}`}
                         >
                             Collaboration
                             <div className={`w-10/12 max-lg:hidden mx-auto mt-1 h-[1px] bg-white scale-0 transition ease-in duration-100 ${collab1 ? "scale-100 bg-blue-500" : ""} ${collab ? "scale-100 bg-blue-500" : ""}`} />
@@ -135,13 +135,13 @@ const StickyNav = () => {
                             onClick={() => setSmallNav(false)}
                             onMouseEnter={() => setSecurity1(true)}
                             onMouseLeave={() => setSecurity1(false)}
-                            className={`max-lg:pt-2 outline-none ${security1 ? "lg:text-blue-500" : ""} ${security || smallNav ? "lg:text-blue-500 " : "max-lg:hidden"}`}
+                            className={`max-lg:pt-2 outline-none w-[80%] md:w-auto ${security1 ? "lg:text-blue-500" : ""} ${security || smallNav ? "lg:text-blue-500 max-lg:pb-6" : "max-lg:hidden"}`}
                         >
                             Security
                             <div className={`w-10/12 max-lg:hidden mx-auto mt-1 h-[1px] bg-white scale-0 transition ease-in duration-100 ${security1 ? "scale-100 bg-blue-500" : ""} ${security ? "scale-100 bg-blue-500" : ""}`} />
                         </a>
                     </div>
-                    <div className={`lg:ml-5 flex items-center lg:space-x-5 max-lg:space-y-3 max-lg:flex-col max-lg:w-full max-lg:mt-5 ${smallNav ? "" : "max-lg:hidden"}`}>
+                    <div className={`lg:ml-5 flex items-center lg:space-x-5 max-lg:space-y-3 max-lg:flex-col max-lg:w-full max-lg:mt-10 ${smallNav ? "" : "max-lg:hidden"}`}>
                         <a
                             href=""
                             onMouseEnter={() => setHovered(true)}
