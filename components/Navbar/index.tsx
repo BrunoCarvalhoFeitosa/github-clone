@@ -59,7 +59,7 @@ const Navbar = () => {
                                     <input
                                         type="text"
                                         placeholder="Search or jump to..."
-                                        className="glass max-lg:bg-neutral-50 w-[340px] h-[35px] max-lg:w-full lg:px-2 py-[3.5px] whitespace-nowrap placeholder:text-[14px] max-lg:placeholder:text-[16px] placeholder:pl-2 focus:z-10 focus:outline-none focus:bg-white focus:text-black border lg:border-neutral-500 max-lg:border-neutral-300 rounded-md text-[14px] font-medium"
+                                        className="max-lg:bg-neutral-50 w-[340px] h-[35px] max-lg:w-full lg:px-2 py-[3.5px] whitespace-nowrap placeholder:text-[14px] max-lg:placeholder:text-[16px] placeholder:pl-2 focus:z-10 focus:outline-none focus:bg-white focus:text-black border lg:border-neutral-500 max-lg:border-neutral-300 rounded-md text-[14px] font-medium"
                                     />
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
