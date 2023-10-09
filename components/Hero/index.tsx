@@ -49,7 +49,7 @@ const Hero = () => {
                     </div>
                     <div
                         style={{ background: "linear-gradient(#d2A8FF, #A371F7 10%, #196C2E 70%, #2EA043 80%, #56D364)", marginLeft:"11px" }}
-                        className="max-md:w-[2px] w-[3px] h-[450px] max-sm:h-[750px] line rounded-md"
+                        className="max-md:w-[2px] w-[3px] h-[650px] max-sm:h-[750px] lg:h-[480px] line rounded-md"
                     />
                 </div>
                 <div className="absolute pt-32 mt-28 max-md:px-4 ml-4 md:ml-12">
