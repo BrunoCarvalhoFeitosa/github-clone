@@ -140,7 +140,7 @@ const Hero = () => {
                             href=""
                             onMouseEnter={() => setHovered1(true)}
                             onMouseLeave={() => setHovered1(false)}
-                            className="flex items-center w-full md:w-auto lg:h-[50px] justify-center text-[16px] py-3 px-5 mt-8 lg:mt-0 rounded-md border-[#ae88f9] border-[1.5px] text-white outline-none"
+                            className="flex items-center w-full md:w-auto lg:h-[50px] justify-center text-[16px] py-3 px-5 md:mt-8 lg:mt-0 rounded-md border-[#ae88f9] border-[1.5px] text-white outline-none"
                         >
                             Start a free enterprise trial
                             <svg
