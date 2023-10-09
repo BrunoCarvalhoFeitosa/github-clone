@@ -86,7 +86,7 @@ const HoverCard = ({ children, backgroundColor, direction, left }: Props) => {
                 transform: springProps.xys.to(translate)
             }}
         >
-            <div className={`z-[1] relative bg-[#161b22] h-full py-[25px] border-[#30363d] border-[0.5px] rounded-xl shadow-xl md:flex ${direction} justify-between`}>
+            <div className={`z-[1] relative bg-[#161b22] h-full py-[25px] border-[#30363d] border-[0.5px] rounded-xl shadow-xl lg:flex ${direction} justify-between`}>
                 {children}
                 <div
                     className={`absolute bottom-[50px] w-[500px] h-[1000px] border-none back z-[-1] ${hovered ? "opacity-95" : "opacity-0"}`}
