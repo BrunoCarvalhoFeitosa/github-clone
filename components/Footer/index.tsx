@@ -336,20 +336,6 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="bg-slate-700">
-                <div className="py-2 flex justify-center text-[12px] font-medium">
-                    <div className="mr-1">
-                        Developed by
-                    </div>
-                    <a
-                        href="https://github.com/BrunoCarvalhoFeitosa"
-                        target="_blank"
-                        className="font-semibold hover:underline"
-                    >
-                        Bruno Carvalho Feitosa
-                    </a>
-                </div>
-            </div>
         </div>
     )
 }
